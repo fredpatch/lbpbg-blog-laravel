@@ -1,8 +1,8 @@
 <header class="flex items-center justify-between px-6 py-3 border-b border-gray-100">
     <div id="header-left" class="flex items-center">
-        <div class="font-semibold text-gray-800">
-            <span class="text-xl text-yellow-500">&lt;YELO&gt;</span> Code
-        </div>
+        <a href="{{ route('home') }}">
+            <x-application-logo />
+        </a>
         <div class="ml-10 top-menu">
             <ul class="flex space-x-4">
                 <li>

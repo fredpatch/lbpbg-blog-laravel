@@ -24,6 +24,8 @@
 
     @include('layouts.partials.header')
 
+    @yield('hero')
+
     <main class="container flex flex-grow px-5 mx-auto">
         {{ $slot }}
     </main>
@@ -31,7 +33,6 @@
     @include('layouts.partials.footer')
 
     @stack('modals')
-
     @livewireScripts
 </body>
 
