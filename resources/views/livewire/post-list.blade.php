@@ -16,7 +16,7 @@
     </div>
     <div class="py-4">
         @foreach ($this->posts as $post)
-            <x-posts.post-item :post="$post" />
+            <x-posts.post-item wire:key="{{ $post->id }}" :post="$post" />
         @endforeach
     </div>
 
