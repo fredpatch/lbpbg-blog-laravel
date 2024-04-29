@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Blog">
 
     <div class="grid w-full grid-cols-4 gap-10">
         <div class="col-span-4 md:col-span-3">
@@ -10,13 +10,7 @@
             {{-- Search box view component --}}
             <livewire:search-box />
 
-            <div id="recommended-topics-box">
-                <h3 class="mb-3 text-lg font-semibold text-gray-900">Recommended Topics</h3>
-                <div class="flex flex-wrap justify-start topics">
-                    <a href="#" class="px-3 py-1 text-base text-white bg-red-600 rounded-xl">
-                        Tailwind</a>
-                </div>
-            </div>
+            @include('posts.partials.categories-box')
         </div>
     </div>
 
