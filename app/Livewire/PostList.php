@@ -24,6 +24,9 @@ class PostList extends Component
     #[Url()]
     public $category = '';
 
+    #[Url()]
+    public $popular = false;
+
     #[On('search')]
     public function updateSearch($search)
     {
@@ -48,14 +51,16 @@ class PostList extends Component
     public function posts()
     {
         return Post::published()
-            ->orderBy('published_at', $this->sort)
             ->when($this->activeCategory, function ($query) {
                 $query->withCategory($this->category);
             })
-            ->where('title', 'like', "%{$this->search}%")
+            ->when($this->popular, function ($query) {
+                $query->popular();
+            })
+            ->search($this->search)
+            ->orderBy('published_at', $this->sort)
             ->simplePaginate(3);
         // ->paginate(3);
-        // ->search($this->search)
     }
 
     #[Computed()]
