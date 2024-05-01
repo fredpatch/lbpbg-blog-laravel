@@ -1,5 +1,4 @@
-<x-app-layout>
-
+<x-app-layout title="Home Page">
     @section('hero')
         <div class="w-full py-32 text-center">
             <h1 class="text-2xl font-bold text-center text-gray-700 md:text-3xl lg:text-5xl">
