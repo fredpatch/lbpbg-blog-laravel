@@ -19,7 +19,7 @@
 
             <p class="mt-2 text-base font-light text-gray-700">
                 {{ $post->getExcerpt() }}
-            </p>
+            </p> 
             <div class="flex items-center justify-between mt-6 article-actions-bar">
 
                 <div class="flex gap-x-2">
