@@ -1,8 +1,8 @@
 # render.yaml
 databases:
-  - name: lbpbg-blog-db
+  - name: lbpbg_blog_db
     plan: free
-    databaseName: lbpbg-blog-db
+    databaseName: lbpbg_blog_db
     user: root
 
 services:
