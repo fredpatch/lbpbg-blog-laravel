@@ -1,5 +1,5 @@
 <div class="pt-10 mt-10 border-t border-gray-100 comments-box">
-    <h2 class="mb-5 text-2xl font-semibold text-gray-900">Discussions</h2>
+    <h2 class="mb-5 text-2xl font-semibold text-gray-900">{{ __('comment.title') }}</h2>
 
     @auth
         <textarea wire:model="comment"
@@ -7,10 +7,10 @@
             cols="30" rows="7"></textarea>
         <button wire:click="postComment"
             class="inline-flex items-center justify-center h-10 px-4 mt-3 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
-            Post Comment
+            {{ __('comment.button') }}
         </button>
     @else
-        <a wire:navigate class="py-1 text-yellow-500 underline" href="{{ route('login') }}"> Login to Post Comments</a>
+        <a wire:navigate class="py-1 text-yellow-500 underline" href="{{ route('login') }}"> {{ __('comment.login') }}</a>
     @endauth
     <div class="px-3 py-2 mt-5 user-comments">
 
@@ -26,7 +26,7 @@
             </div>
         @empty
             <div class="text-center text-gray-500">
-                <span> No Comments Posted</span>
+                <span> {{ __('comment.placeholder') }}</span>
             </div>
         @endforelse
     </div>
