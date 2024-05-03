@@ -14,7 +14,7 @@
             @endif
 
             @if ($search)
-                containing:
+                {{ __('blog.post_list.containing') }}:
                 <strong class="ml-2">
                     <span class="font-semibold">{{ $search }}</span>
                 </strong>
@@ -22,16 +22,16 @@
         </div>
         <div class="flex items-center space-x-4 font-light ">
             <x-checkbox wire:model.live="popular" />
-            <x-label>Popular</x-label>
+            <x-label>{{ __('blog.post_list.popular') }}</x-label>
             <button
                 class="{{ $this->sort === 'desc' ? 'text-gray-900 border-b border-gray-700' : 'text-gray-500' }} py-4 "
                 wire:click="setSort('desc')">
-                Latest
+                {{ __('blog.post_list.latest') }}
             </button>
             <button
                 class="{{ $this->sort === 'asc' ? 'text-gray-900 border-b border-gray-700' : 'text-gray-500' }} py-4"
                 wire:click="setSort('asc')">
-                Oldest
+                {{ __('blog.post_list.oldest') }}
             </button>
         </div>
     </div>
