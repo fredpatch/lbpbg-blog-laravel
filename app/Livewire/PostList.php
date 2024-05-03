@@ -60,8 +60,8 @@ class PostList extends Component
             })
             ->search($this->search)
             ->orderBy('published_at', $this->sort)
-            ->simplePaginate(3);
-        // ->paginate(3);
+            ->paginate(3);
+        // ->simplePaginate(3);
     }
 
     #[Computed()]
